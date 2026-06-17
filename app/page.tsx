@@ -2,6 +2,7 @@
 import { assets } from "@/assets/assets";
 import Sidebar from "@/components/Sidebar";
 import PromptBox from "@/components/PromptBox";
+import Message from "@/components/Message";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -37,7 +38,9 @@ export default function Home() {
         </>
       ):
       (
-      <div></div>
+      <div>
+        <Message role='user' content='What is Nextjs'/>
+      </div>
       )
     }
     <PromptBox isLoading={isLoading} setIsLoading={setIsLoading}/>
